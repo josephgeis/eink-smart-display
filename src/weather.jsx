@@ -44,7 +44,7 @@ class Weather extends React.Component {
 
   componentDidMount() {
     this.updateInfo();
-    this.timerID = setInterval(() => this.tick(), 60000);
+    this.timerID = setInterval(() => this.tick(), 15000);
   }
 
   componentWillUnmount() {
@@ -93,12 +93,12 @@ class WeatherForecast extends React.Component {
         <p className="weather-time">{this.getTimeString(this.date)}</p>
         <canvas className="skycon" ref={this.ref} width="80px" height="80px" />
         <p className="weather-detail">
-          <i class="fas fa-thermometer-three-quarters"></i>{" "}
+          <i className="fas fa-thermometer-three-quarters"></i>{" "}
           {Math.round(this.props.data.temperature)}˚
         </p>
         <p className="weather-detail">
           <i
-            class={
+            className={
               "fas " +
               (Math.round(this.props.data.precipProbability * 100) >= 5 ||
               ["rain", "sleet", "snow", "thunderstorm", "hail"].includes(
