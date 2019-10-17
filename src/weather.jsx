@@ -28,13 +28,14 @@ class Weather extends React.Component {
       data.push(response.data.hourly.data[5]);
       data.push(response.data.hourly.data[9]);
       data.push(response.data.hourly.data[13]);
-      this.setState({ data: data });
     });
+
+    this.setState({ data: data });
   }
 
   tick() {
     const date = new Date();
-    if (date.getMinutes() % 5 === 0) {
+    if (date.getMinutes() % 5 == 0) {
       this.updateInfo();
     } else {
       console.info("Not updating.");
