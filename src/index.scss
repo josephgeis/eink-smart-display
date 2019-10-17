@@ -1,0 +1,133 @@
+@import "~bootstrap";
+@import "Jellee";
+@import "Glacial";
+@import "fa/fontawesome";
+@import "fa/solid";
+@import "fa/regular";
+
+.clock {
+  font-size: 9rem;
+  font-family: Jellee;
+
+  & .ampm {
+    font-size: 0.4em;
+  }
+}
+
+.date {
+  font-family: Jellee;
+  font-size: 2rem;
+  width: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+
+  &.dark {
+    background-color: #000;
+    color: $light;
+  }
+
+  & > * {
+    margin-bottom: 1em;
+  }
+}
+
+button {
+  font-family: Glacial, sans-serif;
+  font-weight: bold;
+  border: 5px solid black;
+  min-height: 2em;
+  min-width: 6em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 2rem;
+
+  &.square {
+    width: 2em;
+    height: 2em;
+  }
+
+  // Stylistic choices
+
+  background: white;
+  color: black;
+
+  &:active {
+    background: black;
+    color: white;
+  }
+
+  .dark & {
+    border: 5px solid white;
+    background: black;
+    color: white;
+
+    &:active {
+      background: white;
+      color: black;
+    }
+  }
+}
+
+.weather {
+  display: grid;
+  //height: 150px;
+  grid-template-columns: repeat(5, 1fr);
+  //grid-template-rows: 150px;
+  //grid-gap: 4px;
+
+  & p {
+    font-size: 21px;
+
+    &.weather-detail {
+      margin-bottom: 0;
+    }
+  }
+
+  &-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:nth-child(5)) {
+      border-right: 1.5px solid black;
+    }
+
+    &:first-child {
+      border-right: 3px solid black;
+    }
+
+    .dark & {
+      border-color: white;
+    }
+  }
+  &-time {
+    font-weight: bold;
+  }
+}
+
+.skycon {
+  margin-bottom: 1rem;
+  height: 75px;
+  width: 75px;
+}
+
+html,
+body {
+  margin: 0;
+  width: 536px;
+  height: 724px;
+
+  body {
+    font-family: Glacial;
+  }
+}
