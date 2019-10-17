@@ -26,10 +26,6 @@ export const months = [
 ];
 
 class DateTime extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="datetime">
@@ -67,10 +63,6 @@ class Clock extends React.Component {
 }
 
 class Date extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="date">
