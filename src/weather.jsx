@@ -35,7 +35,7 @@ class Weather extends React.Component {
 
   tick() {
     const date = new Date();
-    if (date.getMinutes() % 5 == 0) {
+    if (date.getMinutes() % 5 === 0) {
       this.updateInfo();
     } else {
       console.info("Not updating.");
