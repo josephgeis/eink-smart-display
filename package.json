@@ -1,7 +1,9 @@
 {
   "name": "eink-smart-clock",
+  "author": "juniorRubyist",
+  "license": "MIT",
+  "repository": "https://github.com/juniorrubyist/eink-smart-clock",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@babel/core": "7.6.0",
     "@svgr/webpack": "4.3.2",
